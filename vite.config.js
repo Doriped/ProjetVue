@@ -5,11 +5,15 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import fs from 'node:fs'
 import path from 'node:path'
 
+// On recrée __dirname car il n'existe pas en mode module
+const __dirname = fileURLToPath(new URL('.', import.meta.url))
+
 // Plugin personnalisé pour gérer le fichier JSON
 const jsonDbPlugin = () => ({
   name: 'simple-json-db',
   configureServer(server) {
     server.middlewares.use('/api/users', (req, res, next) => {
+      // On utilise le __dirname qu'on a défini plus haut
       const dbPath = path.resolve(__dirname, 'DONOTOPEN.json')
 
       if (req.method === 'GET') {
@@ -28,6 +32,7 @@ const jsonDbPlugin = () => ({
           body += chunk.toString()
         })
         req.on('end', () => {
+          // Petit correctif : on vérifie que le dossier existe (au cas où)
           fs.writeFileSync(dbPath, body)
           res.setHeader('Content-Type', 'application/json')
           res.end(JSON.stringify({ success: true }))
@@ -43,7 +48,7 @@ export default defineConfig({
   plugins: [
     vue(),
     vueDevTools(),
-    jsonDbPlugin() // On ajoute notre plugin ici
+    jsonDbPlugin()
   ],
   resolve: {
     alias: {
