@@ -1,1192 +1,277 @@
 [
   {
     "id": 1,
-    "name": "Spice Route Manipal",
-    "cuisine": [
-      "Fast Food"
-    ],
-    "price_level": 1,
-    "rating": 3.4,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
+    "name": "Madhuvan Veg Restaurant",
+    "cuisine": ["Indian", "Asian"],
+    "price_level": 2,
+    "rating": 4.3,
+    "address": "Madhuvan Serai Building, Upendra Nagar, near Smrithi Bhavan, Eshwar Nagar, Manipal, Karnataka 576104",
     "coordinates": {
-      "lat": 13.344601,
-      "lng": 74.774375
+      "lat": 13.35086,
+      "lng": 74.78755
     },
-    "phone": "+91 9418196001",
-    "website": "https://spiceroutemanipal.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "parking",
-      "quick-bite",
-      "spicy",
-      "budget"
-    ],
-    "dietary": [],
+    "phone": "+91 820 2571677",
+    "website": "https://hotelmadhuvanserai.com/madhuvan-veg/",
     "delivery": true,
     "takeout": true
   },
   {
     "id": 2,
-    "name": "Coastal Curry House",
-    "cuisine": [
-      "Cafe"
-    ],
+    "name": "Dollops Restaurant",
+    "cuisine": ["Indian", "Chinese"],
     "price_level": 2,
-    "rating": 4.0,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
+    "rating": 4.2,
+    "address": "16-384B, Tiger Circle Upendra Nagar, Manipal, Karnataka 576104",
     "coordinates": {
-      "lat": 13.348781,
-      "lng": 74.776684
+      "lat": 13.35201,
+      "lng": 74.78750
     },
-    "phone": "+91 9302654235",
-    "website": "https://coastalcurryhouse.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "popular",
-      "family",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
+    "phone": "08202570908",
+    "website": null,
     "delivery": true,
     "takeout": true
   },
   {
     "id": 3,
-    "name": "Eshwar Bites",
-    "cuisine": [
-      "North Indian",
-      "Punjabi"
-    ],
-    "price_level": 1,
-    "rating": 4.4,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
+    "name": "Vito's",
+    "cuisine": ["Italian", "Indian"],
+    "price_level": 3,
+    "rating": 4.2,
+    "address": "Manipal Commercial Complex, Eshwar Nagar, Manipal, Karnataka 576104",
     "coordinates": {
-      "lat": 13.350869,
-      "lng": 74.805871
+      "lat": 13.35256,
+      "lng": 74.78868
     },
-    "phone": "+91 9618495931",
-    "website": "https://eshwarbites.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "quiet",
-      "family",
-      "rooftop",
-      "budget"
-    ],
-    "dietary": [],
+    "phone": "07349428589",
+    "website": "https://instagram.com/vitos.manipal",
     "delivery": true,
     "takeout": true
   },
   {
     "id": 4,
-    "name": "Udupi Sagar",
-    "cuisine": [
-      "Japanese"
-    ],
-    "price_level": 3,
-    "rating": 4.6,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
+    "name": "Hadiqa",
+    "cuisine": ["Italian", "Continental"],
+    "price_level": 2,
+    "rating": 4.4,
+    "address": "Smrithi Bhavan, Madhuvan Serai Building, behind T.M.A. Pai Park, Eshwar Nagar, Manipal, Karnataka 576104",
     "coordinates": {
-      "lat": 13.341904,
-      "lng": 74.779921
+      "lat": 13.35098,
+      "lng": 74.78784
     },
-    "phone": "+91 9441928327",
-    "website": "https://udupisagar.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "student-favorite",
-      "parking",
-      "rooftop",
-      "budget",
-      "popular"
-    ],
-    "dietary": [],
+    "phone": "08204294455",
+    "website": null,
     "delivery": true,
     "takeout": true
   },
   {
     "id": 5,
-    "name": "Paddy Fields Kitchen",
-    "cuisine": [
-      "Mangalorean",
-      "Coastal"
-    ],
-    "price_level": 1,
-    "rating": 4.5,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
+    "name": "Bacchus Inn",
+    "cuisine": ["North Indian", "Chinese", "Kebab"],
+    "price_level": 2,
+    "rating": 4.2,
+    "address": "Hayagreeva Nagar, Udupi, Karnataka 576104",
     "coordinates": {
-      "lat": 13.347628,
-      "lng": 74.76778
+      "lat": 13.34882,
+      "lng": 74.78015
     },
-    "phone": "+91 9553767242",
-    "website": "https://paddyfieldskitchen.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "group-friendly",
-      "quick-bite",
-      "popular",
-      "student-favorite",
-      "budget"
-    ],
-    "dietary": [],
+    "phone": "08105558788",
+    "website": null,
     "delivery": true,
     "takeout": true
   },
   {
     "id": 6,
-    "name": "Tandoori Junction",
-    "cuisine": [
-      "Udupi",
-      "South Indian"
-    ],
+    "name": "Saiba",
+    "cuisine": ["Indian", "Continental"],
     "price_level": 2,
-    "rating": 4.1,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.356139,
-      "lng": 74.801166
-    },
-    "phone": "+91 9926916697",
-    "website": "https://tandoorijunction.in",
-    "opening_hours": [
-      "Mon-Sun: 11:00 - 23:00"
-    ],
-    "tags": [
-      "student-favorite",
-      "family",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
+    "rating": 4.2,
+    "address": "Main Road, near Saibaba Hospital, Madhav Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35281, "lng": 74.78818 },
+    "phone": "08277534185",
+    "website": null,
     "delivery": true,
     "takeout": true
   },
   {
     "id": 7,
-    "name": "Malnad Mess",
-    "cuisine": [
-      "North Indian",
-      "Punjabi"
-    ],
-    "price_level": 3,
-    "rating": 3.9,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.345044,
-      "lng": 74.771643
-    },
-    "phone": "+91 9848281489",
-    "website": "https://malnadmess.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "budget",
-      "casual",
-      "parking"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 8,
-    "name": "Biriyani Street",
-    "cuisine": [
-      "Indian"
-    ],
-    "price_level": 2,
-    "rating": 3.9,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.338467,
-      "lng": 74.804022
-    },
-    "phone": "+91 9343039117",
-    "website": "https://biriyanistreet.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "casual",
-      "student-favorite",
-      "wifi",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
+    "name": "Pai Tiffins",
+    "cuisine": ["South Indian", "Fast Food"],
+    "price_level": 1,
+    "rating": 4.2,
+    "address": "Shop No 16-444 A1, Ground Floor, Manipal Commercial Complex, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35296, "lng": 74.78953 },
+    "phone": "09611013777",
+    "website": "https://www.facebook.com/paitiffins/",
     "delivery": true,
     "takeout": true
   },
   {
     "id": 9,
-    "name": "Ocean Pearl Diner",
-    "cuisine": [
-      "Italian"
-    ],
-    "price_level": 2,
-    "rating": 4.0,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.343083,
-      "lng": 74.78765
-    },
-    "phone": "+91 9434657871",
-    "website": "https://oceanpearldiner.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "family",
-      "budget",
-      "spicy"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 10,
-    "name": "Filter Kaapi Bar",
-    "cuisine": [
-      "Mangalorean",
-      "Coastal"
-    ],
+    "name": "Chai Point Manipal",
+    "cuisine": ["Tea", "Snacks", "Fast Food"],
     "price_level": 1,
-    "rating": 3.5,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.353146,
-      "lng": 74.774616
-    },
-    "phone": "+91 9851834738",
-    "website": "https://filterkaapibar.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "rooftop",
-      "wifi",
-      "popular",
-      "group-friendly",
-      "family",
-      "budget"
-    ],
-    "dietary": [],
+    "rating": 4.5,
+    "address": "PUP CAFE COMPOUND, Dr VS Acharya Rd, opposite JEWEL ROCK BAR, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35317, "lng": 74.78416 },
+    "phone": null,
+    "website": null,
     "delivery": false,
     "takeout": true
   },
   {
+    "id": 10,
+    "name": "Eye of the Tiger",
+    "cuisine": ["Indian", "Bar", "Grill", "Continental"],
+    "price_level": 3,
+    "rating": 4.3,
+    "address": "Inside Green Park Hotel, 4th Floor, Eshwar Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35169, "lng": 74.787147 },
+    "phone": "07899039139",
+    "website": "http://www.facebook.com/eott09",
+    "delivery": true,
+    "takeout": true
+  },
+  {
     "id": 11,
-    "name": "Noodle Nook",
-    "cuisine": [
-      "Thai"
-    ],
+    "name": "Domino's Pizza",
+    "cuisine": ["Pizza", "Fast Food"],
     "price_level": 2,
-    "rating": 4.1,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.355498,
-      "lng": 74.793281
-    },
-    "phone": "+91 9410651333",
-    "website": "https://noodlenook.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "popular",
-      "casual",
-      "quiet"
-    ],
-    "dietary": [
-      "gluten-free"
-    ],
+    "rating": 4.2,
+    "address": "8QXM+3F9, DOOR NO 4-1A5, PREMIER ENCLAVE GROUND FLOOR, near Syndicate Circle, Vidyaratna Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.34850, "lng": 74.78378 },
+    "phone": "18002081234",
+    "website": "https://www.dominos.co.in/store-locations/manipal/manipal?src=local_gmb&utm_source=Google_GMB&utm_medium=GMB_SEO_urls_website",
     "delivery": true,
     "takeout": true
   },
   {
     "id": 12,
-    "name": "Wok & Roll",
-    "cuisine": [
-      "South Indian"
-    ],
-    "price_level": 2,
-    "rating": 4.5,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.358543,
-      "lng": 74.769112
-    },
-    "phone": "+91 9480132677",
-    "website": "https://wokandroll.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "spicy",
-      "casual",
-      "popular",
-      "group-friendly",
-      "quick-bite",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
+    "name": "Barbeque Nation",
+    "cuisine": ["Grill", "Buffet", "Indian"],
+    "price_level": 3,
+    "rating": 4.4,
+    "address": "Ground Floor, Central Cinemas, Laxmindra Nagar, Udupi, Main Rd, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.34953, "lng": 74.78280 },
+    "phone": "08069028783",
+    "website": "https://www.barbequenation.com/",
     "delivery": true,
     "takeout": true
   },
   {
     "id": 13,
-    "name": "Trattoria Manipal",
-    "cuisine": [
-      "Japanese"
-    ],
+    "name": "Hakuna Matata",
+    "cuisine": ["Grill", "Cafe", "Continental"],
     "price_level": 2,
-    "rating": 4.0,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.360976,
-      "lng": 74.806808
-    },
-    "phone": "+91 9572343098",
-    "website": "https://trattoriamanipal.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "spicy",
-      "group-friendly",
-      "quick-bite",
-      "wifi"
-    ],
-    "dietary": [],
+    "rating": 4.1,
+    "address": "Parkala Rd, opposite Sushma Lodge, Eshwar Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35568, "lng": 74.79821 },
+    "phone": "09741923418",
+    "website": null,
     "delivery": true,
     "takeout": true
   },
   {
     "id": 14,
-    "name": "Bombay Chaat Co.",
-    "cuisine": [
-      "Udupi",
-      "South Indian"
-    ],
-    "price_level": 1,
-    "rating": 4.7,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.339923,
-      "lng": 74.772805
-    },
-    "phone": "+91 9513619399",
-    "website": "https://bombaychaatco..in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "popular",
-      "student-favorite",
-      "budget",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
+    "name": "A Cafe Story",
+    "cuisine": ["Indian", "Continental"],
+    "price_level": 2,
+    "rating": 4.5,
+    "address": "9Q2M+CH2 Commercial Complex, Pratham Pride Building, Dr VS Acharya Rd, Vidyaratna Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35122, "lng": 74.78386 },
+    "phone": "09845231370",
+    "website": "https://acafestoryoow.petpooja.com/",
     "delivery": true,
     "takeout": true
   },
   {
     "id": 15,
-    "name": "Mangalorean Grill",
-    "cuisine": [
-      "North Indian",
-      "Punjabi"
-    ],
-    "price_level": 1,
-    "rating": 4.3,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.34554,
-      "lng": 74.776156
-    },
-    "phone": "+91 9947510799",
-    "website": "https://mangaloreangrill.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "parking",
-      "rooftop",
-      "budget"
-    ],
-    "dietary": [],
+    "name": "Shalas",
+    "cuisine": ["Seafood"],
+    "price_level": 4,
+    "rating": 4.6,
+    "address": "8QWM+RPP, Ananth Nagar 1st Stage, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.34729, "lng": 74.78438 },
+    "phone": "09538626292",
+    "website": null,
     "delivery": true,
-    "takeout": false
+    "takeout": true
   },
   {
     "id": 16,
-    "name": "Szechuan Spice",
-    "cuisine": [
-      "Chinese"
-    ],
+    "name": "MIT Food Court-1",
+    "cuisine": ["Indian", "Fast Food"],
     "price_level": 1,
-    "rating": 4.6,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.346869,
-      "lng": 74.771625
-    },
-    "phone": "+91 9384980841",
-    "website": "https://szechuanspice.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "family",
-      "group-friendly",
-      "parking",
-      "casual",
-      "budget",
-      "popular"
-    ],
-    "dietary": [],
-    "delivery": true,
+    "rating": 3.6,
+    "address": "MIT Campus, near Kamath Circle, Eshwar Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.34768, "lng": 74.79376 },
+    "phone": "08202927494",
+    "website": "http://manipal.edu/mit.html",
+    "delivery": false,
     "takeout": true
   },
   {
     "id": 17,
-    "name": "Tiffin Tales",
-    "cuisine": [
-      "Cafe"
-    ],
-    "price_level": 2,
-    "rating": 3.7,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.353222,
-      "lng": 74.776087
-    },
-    "phone": "+91 9640164005",
-    "website": "https://tiffintales.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "casual",
-      "wifi",
-      "parking",
-      "popular",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
-    "takeout": false
+    "name": "MIT Food Court-2",
+    "cuisine": ["Indian", "Fast Food"],
+    "price_level": 1,
+    "rating": 4.3,
+    "address": "Eshwar Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.34567, "lng": 74.79637 },
+    "phone": null,
+    "website": "http://www.theindiankitchenmanipal.com/",
+    "delivery": false,
+    "takeout": true
   },
   {
     "id": 18,
-    "name": "Masala Market",
-    "cuisine": [
-      "Cafe"
-    ],
-    "price_level": 1,
+    "name": "The Mill",
+    "cuisine": ["Indian"],
+    "price_level": 3,
     "rating": 4.2,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.35803,
-      "lng": 74.789465
-    },
-    "phone": "+91 9962045053",
-    "website": "https://masalamarket.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "budget",
-      "parking",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
+    "address": "near masjid, Saralebettu, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35433, "lng": 74.79238 },
+    "phone": "09663270777",
+    "website": null,
+    "delivery": false,
     "takeout": true
   },
   {
     "id": 19,
-    "name": "Rooftop Rasoi",
-    "cuisine": [
-      "Bakery",
-      "Cafe"
-    ],
-    "price_level": 3,
-    "rating": 3.6,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.360317,
-      "lng": 74.801313
-    },
-    "phone": "+91 9326025634",
-    "website": "https://rooftoprasoi.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "popular",
-      "spicy",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
+    "name": "Deetee",
+    "cuisine": ["Bar"],
+    "price_level": 2,
+    "rating": 4.2,
+    "address": "9Q4X+25P, SH 65, Eshwar Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35537, "lng": 74.79791 },
+    "phone": "09833800000",
+    "website": null,
+    "delivery": false,
     "takeout": true
   },
   {
     "id": 20,
-    "name": "Green Bowl Cafe",
-    "cuisine": [
-      "Japanese"
-    ],
+    "name": "Dexter Restobar",
+    "cuisine": ["Indien", "Bar"],
     "price_level": 2,
-    "rating": 3.8,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.357088,
-      "lng": 74.774559
-    },
-    "phone": "+91 9836541458",
-    "website": "https://greenbowlcafe.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "spicy",
-      "family",
-      "quiet",
-      "casual"
-    ],
-    "dietary": [],
+    "rating": 4.3,
+    "address": "Eshwar Nagar, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35484, "lng": 74.79533 },
+    "phone": "08892889737",
+    "website": null,
     "delivery": true,
     "takeout": true
   },
   {
     "id": 21,
-    "name": "Punjab Da Dhaba",
-    "cuisine": [
-      "Indian"
-    ],
-    "price_level": 1,
-    "rating": 4.2,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.346296,
-      "lng": 74.79803
-    },
-    "phone": "+91 9698169340",
-    "website": "https://punjabdadhaba.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "parking",
-      "group-friendly",
-      "budget",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 22,
-    "name": "Goa Shack",
-    "cuisine": [
-      "Cafe"
-    ],
-    "price_level": 3,
-    "rating": 3.7,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.348351,
-      "lng": 74.804853
-    },
-    "phone": "+91 9795148465",
-    "website": "https://goashack.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "parking",
-      "casual",
-      "rooftop",
-      "popular",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 23,
-    "name": "Kebab Corner",
-    "cuisine": [
-      "Cafe"
-    ],
-    "price_level": 1,
-    "rating": 4.3,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.345223,
-      "lng": 74.788013
-    },
-    "phone": "+91 9844369957",
-    "website": "https://kebabcorner.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "student-favorite",
-      "rooftop",
-      "parking",
-      "wifi",
-      "casual",
-      "budget",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 24,
-    "name": "Sushi Little Bay",
-    "cuisine": [
-      "Fast Food"
-    ],
-    "price_level": 3,
-    "rating": 4.3,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.340241,
-      "lng": 74.804984
-    },
-    "phone": "+91 9943320037",
-    "website": "https://sushilittlebay.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "popular",
-      "student-favorite",
-      "quick-bite",
-      "rooftop",
-      "group-friendly"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 25,
-    "name": "The Rolling Paratha",
-    "cuisine": [
-      "Fast Food"
-    ],
-    "price_level": 3,
-    "rating": 3.4,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.356023,
-      "lng": 74.797342
-    },
-    "phone": "+91 9863287083",
-    "website": "https://therollingparatha.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "casual",
-      "wifi",
-      "parking",
-      "quick-bite",
-      "budget"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 26,
-    "name": "Idli Express",
-    "cuisine": [
-      "Bakery",
-      "Cafe"
-    ],
-    "price_level": 3,
-    "rating": 4.6,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.348242,
-      "lng": 74.803088
-    },
-    "phone": "+91 9627743487",
-    "website": "https://idliexpress.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "wifi",
-      "family",
-      "quiet",
-      "rooftop",
-      "popular",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 27,
-    "name": "Thali Factory",
-    "cuisine": [
-      "Italian"
-    ],
-    "price_level": 1,
-    "rating": 3.6,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.34355,
-      "lng": 74.794146
-    },
-    "phone": "+91 9431665876",
-    "website": "https://thalifactory.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "popular",
-      "group-friendly",
-      "quick-bite",
-      "budget"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": false
-  },
-  {
-    "id": 28,
-    "name": "Veg Delight",
-    "cuisine": [
-      "Seafood",
-      "Coastal"
-    ],
-    "price_level": 2,
-    "rating": 3.9,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.338142,
-      "lng": 74.779774
-    },
-    "phone": "+91 9366889373",
-    "website": "https://vegdelight.in",
-    "opening_hours": [
-      "Mon-Sun: 11:00 - 23:00"
-    ],
-    "tags": [
-      "wifi",
-      "spicy",
-      "popular",
-      "budget",
-      "quick-bite"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 29,
-    "name": "Nonya Thai",
-    "cuisine": [
-      "Udupi",
-      "South Indian"
-    ],
+    "name": "Daddy chocolate",
+    "cuisine": ["African", "Cafe"],
     "price_level": 2,
     "rating": 4.1,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.359766,
-      "lng": 74.789859
-    },
-    "phone": "+91 9401627204",
-    "website": "https://nonyathai.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "rooftop",
-      "wifi",
-      "budget",
-      "quick-bite",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 30,
-    "name": "Ghee Roast House",
-    "cuisine": [
-      "Seafood",
-      "Coastal"
-    ],
-    "price_level": 2,
-    "rating": 3.8,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.339966,
-      "lng": 74.765814
-    },
-    "phone": "+91 9505310033",
-    "website": "https://gheeroasthouse.in",
-    "opening_hours": [
-      "Mon-Sun: 07:30 - 22:30"
-    ],
-    "tags": [
-      "rooftop",
-      "casual",
-      "wifi"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 31,
-    "name": "Bento Bento",
-    "cuisine": [
-      "Mangalorean",
-      "Coastal"
-    ],
-    "price_level": 2,
-    "rating": 4.4,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.356406,
-      "lng": 74.772047
-    },
-    "phone": "+91 9512419049",
-    "website": "https://bentobento.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "group-friendly",
-      "rooftop",
-      "family",
-      "student-favorite",
-      "quick-bite"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 32,
-    "name": "Burger Planet",
-    "cuisine": [
-      "Fast Food"
-    ],
-    "price_level": 2,
-    "rating": 4.5,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.357109,
-      "lng": 74.788769
-    },
-    "phone": "+91 9858651850",
-    "website": "https://burgerplanet.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "family",
-      "popular",
-      "budget",
-      "wifi",
-      "casual"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 33,
-    "name": "Pasta Punto",
-    "cuisine": [
-      "Fast Food"
-    ],
-    "price_level": 2,
-    "rating": 4.3,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.360071,
-      "lng": 74.797535
-    },
-    "phone": "+91 9669453147",
-    "website": "https://pastapunto.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "quick-bite",
-      "group-friendly",
-      "popular",
-      "budget",
-      "spicy"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 34,
-    "name": "Momoz Hub",
-    "cuisine": [
-      "Japanese"
-    ],
-    "price_level": 1,
-    "rating": 3.9,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.3442,
-      "lng": 74.776746
-    },
-    "phone": "+91 9548083136",
-    "website": "https://momozhub.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "group-friendly",
-      "wifi",
-      "student-favorite",
-      "budget"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": false
-  },
-  {
-    "id": 35,
-    "name": "Coco Bakes & Cafe",
-    "cuisine": [
-      "North Indian",
-      "Punjabi"
-    ],
-    "price_level": 1,
-    "rating": 4.0,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.343839,
-      "lng": 74.792886
-    },
-    "phone": "+91 9778856855",
-    "website": "https://cocobakesandcafe.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "quiet",
-      "group-friendly",
-      "rooftop",
-      "family",
-      "budget"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": true
-  },
-  {
-    "id": 36,
-    "name": "Dosa Diaries",
-    "cuisine": [
-      "Cafe"
-    ],
-    "price_level": 2,
-    "rating": 4.7,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.354564,
-      "lng": 74.773045
-    },
-    "phone": "+91 9474989413",
-    "website": "https://dosadiaries.in",
-    "opening_hours": [
-      "Mon-Sun: 11:00 - 23:00"
-    ],
-    "tags": [
-      "budget",
-      "casual",
-      "quiet",
-      "popular",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
+    "address": "Satkar Paradise , End Point Road,, 2nd Cross, Vidyaratna Nagar, near Crumbz Bakery, Manipal, Karnataka 576104",
+    "coordinates": { "lat": 13.35197, "lng": 74.78314 },
+    "phone": "08204292000",
+    "website": "http://www.satkargroup.com/",
     "delivery": false,
-    "takeout": true
-  },
-  {
-    "id": 37,
-    "name": "Pepper & Paneer",
-    "cuisine": [
-      "North Indian",
-      "Punjabi"
-    ],
-    "price_level": 1,
-    "rating": 4.8,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.351281,
-      "lng": 74.794292
-    },
-    "phone": "+91 9971094777",
-    "website": "https://pepperandpaneer.in",
-    "opening_hours": [
-      "Mon-Sun: 11:00 - 23:00"
-    ],
-    "tags": [
-      "spicy",
-      "quiet",
-      "wifi",
-      "budget",
-      "popular"
-    ],
-    "dietary": [],
-    "delivery": false,
-    "takeout": false
-  },
-  {
-    "id": 38,
-    "name": "Kori Rotti Co.",
-    "cuisine": [
-      "Japanese"
-    ],
-    "price_level": 1,
-    "rating": 4.2,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.354475,
-      "lng": 74.771373
-    },
-    "phone": "+91 9394131869",
-    "website": "https://korirottico..in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "wifi",
-      "group-friendly",
-      "quiet",
-      "popular",
-      "quick-bite",
-      "budget"
-    ],
-    "dietary": [],
-    "delivery": true,
-    "takeout": false
-  },
-  {
-    "id": 39,
-    "name": "Tandoor Terrace",
-    "cuisine": [
-      "Cafe"
-    ],
-    "price_level": 1,
-    "rating": 4.7,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.342987,
-      "lng": 74.773863
-    },
-    "phone": "+91 9412328120",
-    "website": "https://tandoorterrace.in",
-    "opening_hours": [
-      "Mon-Fri: 08:00 - 22:00; Sat-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "group-friendly",
-      "quick-bite",
-      "wifi",
-      "quiet",
-      "spicy",
-      "budget",
-      "popular",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": false,
-    "takeout": true
-  },
-  {
-    "id": 40,
-    "name": "Cafe Monsoon",
-    "cuisine": [
-      "Cafe"
-    ],
-    "price_level": 2,
-    "rating": 3.5,
-    "address": "Eshwar Nagar, Manipal, Karnataka, India",
-    "coordinates": {
-      "lat": 13.343602,
-      "lng": 74.776111
-    },
-    "phone": "+91 9393618324",
-    "website": "https://cafemonsoon.in",
-    "opening_hours": [
-      "Mon-Sun: 08:00 - 23:00"
-    ],
-    "tags": [
-      "spicy",
-      "casual",
-      "vegetarian"
-    ],
-    "dietary": [
-      "vegetarian"
-    ],
-    "delivery": true,
     "takeout": true
   }
 ]
