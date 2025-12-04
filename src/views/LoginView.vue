@@ -10,9 +10,9 @@ const username = ref('')
 const password = ref('')
 const error = ref('')
 
-function handleLogin() {
+async function handleLogin() { // Ajout de async
   try {
-    authStore.login(username.value, password.value)
+    await authStore.login(username.value, password.value) // Ajout de await
     router.push('/')
   } catch (e) {
     error.value = "Invalid username or password."

@@ -10,11 +10,9 @@ const username = ref('')
 const password = ref('')
 const error = ref('')
 
-function handleSignup() {
+async function handleSignup() { // Ajout de async
   try {
-    // Tente l'inscription (vérifie si l'utilisateur existe déjà dans le store)
-    authStore.signup(username.value, password.value)
-    // Redirige vers l'accueil après succès
+    await authStore.signup(username.value, password.value) // Ajout de await
     router.push('/')
   } catch (e) {
     error.value = e.message

@@ -56,12 +56,12 @@ function spin() {
 }
 
 // --- Favorites ---
-function toggleFavorite(restaurant) {
+async function toggleFavorite(restaurant) { // Ajout async
   if (!authStore.isAuthenticated) {
     alert("Please log in to add favorites!")
     return
   }
-  authStore.toggleFavorite(restaurant)
+  await authStore.toggleFavorite(restaurant) // Ajout await
 }
 
 // --- Favorites Panel ---
@@ -169,6 +169,15 @@ function initMap(lat, lng) {
         </p>
         <p class="address">{{ randomRestaurant.address }}</p>
         <p class="delivery-badge" v-if="randomRestaurant.delivery">🛵 Delivery available</p>
+
+        <a
+          :href="`https://www.google.com/maps/dir/?api=1&destination=${randomRestaurant.coordinates.lat},${randomRestaurant.coordinates.lng}`"
+          target="_blank"
+          class="route-btn"
+        >
+          📍 Itinerary
+        </a>
+
     </div>
 
     <div v-if="randomRestaurant" id="map" class="map"></div>
@@ -226,6 +235,8 @@ function initMap(lat, lng) {
 .meta { margin: 0.3rem 0; color: #4b5563; }
 .address { color: #6b7280; font-size: 0.9rem; }
 .delivery-badge { display: inline-block; background: #dcfce7; color: #166534; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; margin-top: 0.5rem; font-weight: 600; }
+.route-btn { display: block; margin-top: 1rem; background-color: #3b82f6; color: white; text-decoration: none; padding: 0.8rem; border-radius: 8px; font-weight: 600; transition: background-color 0.2s; }
+.route-btn:hover { background-color: #2563eb; }
 .fav-btn { position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 1.6rem; cursor: pointer; transition: 0.2s; }
 .fav-btn:hover { transform: scale(1.15); }
 .login-hint { margin-top: 1rem; color: #9ca3af; font-size: 0.9rem; }
