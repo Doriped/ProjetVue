@@ -18,8 +18,10 @@ const onlyDelivery = ref(false)
 
 // Load restaurants
 onMounted(async () => {
-  const res = await fetch('/restaurants.json')
-  restaurants.value = await res.json()
+  try {
+    const res = await fetch('/restaurants.json')
+    restaurants.value = await res.json()
+  } catch(e) { console.error(e) }
   loading.value = false
 })
 
@@ -49,19 +51,22 @@ function spin() {
   const index = Math.floor(Math.random() * filteredRestaurants.value.length)
   randomRestaurant.value = filteredRestaurants.value[index]
 
-  initMap(
-    randomRestaurant.value.coordinates.lat,
-    randomRestaurant.value.coordinates.lng
-  )
+  // Petit timeout pour laisser le DOM se mettre à jour
+  setTimeout(() => {
+      initMap(
+        randomRestaurant.value.coordinates.lat,
+        randomRestaurant.value.coordinates.lng
+      )
+  }, 100)
 }
 
 // --- Favorites ---
-async function toggleFavorite(restaurant) { // Ajout async
+async function toggleFavorite(restaurant) {
   if (!authStore.isAuthenticated) {
     alert("Please log in to add favorites!")
     return
   }
-  await authStore.toggleFavorite(restaurant) // Ajout await
+  await authStore.toggleFavorite(restaurant)
 }
 
 // --- Favorites Panel ---
@@ -90,37 +95,25 @@ const customIcon = L.icon({
 })
 
 function initMap(lat, lng) {
-  if (!map) {
-    map = L.map('map').setView([lat, lng], 16)
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap'
-    }).addTo(map)
-    marker = L.marker([lat, lng], { icon: customIcon }).addTo(map)
-  } else {
-    map.setView([lat, lng], 16)
-    marker.setLatLng([lat, lng])
+  // Reset map container if needed
+  if(map) {
+      map.remove();
+      map = null;
   }
+
+  map = L.map('map').setView([lat, lng], 16)
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap'
+  }).addTo(map)
+  marker = L.marker([lat, lng], { icon: customIcon }).addTo(map)
 }
 </script>
 
 <template>
   <div class="page">
-
-    <div class="user-bar">
-      <div v-if="authStore.isAuthenticated">
-        <span>Hello, <strong>{{ authStore.currentUser.username }}</strong>!</span>
-        <button class="logout-btn" @click="authStore.logout">Logout</button>
-      </div>
-      <div v-else>
-        <router-link to="/login" class="auth-link">Log in</router-link>
-        <router-link to="/signup" class="auth-link primary">Sign up</router-link>
-      </div>
-    </div>
-
     <h1 class="title">LunchRoulette</h1>
 
     <div class="filter-bar" v-if="!loading">
-
       <select v-model="selectedCuisine">
         <option value="all">All cuisines</option>
         <option v-for="c in cuisines" :key="c" :value="c">{{ c }}</option>
@@ -145,7 +138,6 @@ function initMap(lat, lng) {
         <input type="checkbox" v-model="onlyDelivery">
         🛵 Delivery only
       </label>
-
     </div>
 
     <button class="spin-btn" @click="spin" :disabled="loading || !filteredRestaurants.length">
@@ -153,7 +145,6 @@ function initMap(lat, lng) {
     </button>
 
     <div v-if="randomRestaurant" class="result-card">
-
         <button
             class="fav-btn"
             @click="toggleFavorite(randomRestaurant)"
@@ -177,7 +168,6 @@ function initMap(lat, lng) {
         >
           📍 Itinerary
         </a>
-
     </div>
 
     <div v-if="randomRestaurant" id="map" class="map"></div>
@@ -192,23 +182,19 @@ function initMap(lat, lng) {
   <div v-if="isFavoritesOpen" class="drawer-overlay" @click="closeFavorites"></div>
 
   <div :class="['drawer', isFavoritesOpen ? 'open' : '']">
-
       <div class="drawer-header">
           <h2>Your Favorites ❤️</h2>
           <button class="drawer-close" @click="closeFavorites">✕</button>
       </div>
-
       <div class="drawer-content">
           <div v-if="!authStore.favorites.length" class="empty-msg">
             No favorites yet.
           </div>
-
           <div v-for="f in authStore.favorites" :key="f.id" class="drawer-item">
               <div>
                   <strong>{{ f.name }}</strong>
                   <p class="small">{{ f.cuisine?.join(', ') }}</p>
               </div>
-
               <button class="remove-btn" @click="authStore.toggleFavorite(f)">🗑️</button>
           </div>
       </div>
@@ -216,41 +202,78 @@ function initMap(lat, lng) {
 </template>
 
 <style scoped>
-/* Vos styles existants */
-.page { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #fafafa; padding: 2rem; position: relative; }
-.title { font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: 0.05em; }
-.user-bar { position: absolute; top: 1rem; right: 2rem; display: flex; gap: 1rem; align-items: center; font-size: 0.9rem; }
-.auth-link { text-decoration: none; color: #4b5563; margin-left: 10px; font-weight: 500; }
-.auth-link.primary { background: #f97316; color: white; padding: 0.4rem 0.8rem; border-radius: 6px; }
-.logout-btn { margin-left: 10px; background: none; border: 1px solid #d1d5db; padding: 0.3rem 0.6rem; border-radius: 6px; cursor: pointer; }
+/* Page layout */
+.page {
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 2rem; position: relative;
+  /* Plus de background fixe, il hérite du body */
+}
+
+.title { font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; letter-spacing: 0.05em; color: var(--text-main); }
+
+/* Filtres */
 .filter-bar { display: flex; gap: 0.8rem; margin-bottom: 1.5rem; flex-wrap: wrap; justify-content: center; }
-.filter-bar select { padding: 0.5rem 0.8rem; font-size: 0.9rem; border-radius: 999px; border: 1px solid #d1d5db; background: white; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-.checkbox-filter { display: flex; align-items: center; gap: 0.4rem; background: white; padding: 0.5rem 0.8rem; border-radius: 999px; border: 1px solid #d1d5db; font-size: 0.9rem; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
-.spin-btn { background: #f97316; color: white; font-size: 1.2rem; padding: 0.8rem 2rem; border: none; border-radius: 999px; cursor: pointer; margin-bottom: 2rem; box-shadow: 0 8px 16px rgba(0,0,0,0.15); transition: 0.15s; }
-.spin-btn:hover { transform: translateY(-2px); }
+
+/* Utilisation des variables pour les inputs */
+.filter-bar select, .checkbox-filter {
+  padding: 0.5rem 0.8rem; font-size: 0.9rem; border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  color: var(--text-main);
+  cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.checkbox-filter { display: flex; align-items: center; gap: 0.4rem; }
+
+.spin-btn {
+  background: var(--primary-color); color: white; font-size: 1.2rem;
+  padding: 0.8rem 2rem; border: none; border-radius: 999px; cursor: pointer;
+  margin-bottom: 2rem; box-shadow: 0 8px 16px rgba(0,0,0,0.15); transition: 0.15s;
+}
+.spin-btn:hover { transform: translateY(-2px); background: var(--accent-hover); }
 .spin-btn:disabled { opacity: 0.4; cursor: default; }
-.result-card { margin-top: 1rem; padding: 1.5rem 2rem; background: white; border-radius: 1rem; width: 90%; max-width: 420px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; }
-.label { color: #6b7280; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
-.name { margin: 0; font-size: 1.5rem; font-weight: 700; }
-.meta { margin: 0.3rem 0; color: #4b5563; }
-.address { color: #6b7280; font-size: 0.9rem; }
+
+/* Result Card */
+.result-card {
+  margin-top: 1rem; padding: 1.5rem 2rem; border-radius: 1rem; width: 90%; max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative;
+  background: var(--bg-card); /* Fond dynamique */
+  color: var(--text-main);    /* Texte dynamique */
+  border: 1px solid var(--border-color);
+}
+
+.label { color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.4rem; }
+.name { margin: 0; font-size: 1.5rem; font-weight: 700; color: var(--text-main); }
+.meta { margin: 0.3rem 0; color: var(--text-muted); }
+.address { color: var(--text-muted); font-size: 0.9rem; }
 .delivery-badge { display: inline-block; background: #dcfce7; color: #166534; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; margin-top: 0.5rem; font-weight: 600; }
-.route-btn { display: block; margin-top: 1rem; background-color: #3b82f6; color: white; text-decoration: none; padding: 0.8rem; border-radius: 8px; font-weight: 600; transition: background-color 0.2s; }
-.route-btn:hover { background-color: #2563eb; }
 .fav-btn { position: absolute; top: 12px; right: 12px; background: none; border: none; font-size: 1.6rem; cursor: pointer; transition: 0.2s; }
 .fav-btn:hover { transform: scale(1.15); }
-.login-hint { margin-top: 1rem; color: #9ca3af; font-size: 0.9rem; }
-.drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.25); z-index: 8; }
-.drawer { position: fixed; top: 0; right: -350px; width: 300px; height: 100vh; background: white; box-shadow: -4px 0 15px rgba(0,0,0,0.15); z-index: 9; padding: 1.2rem; display: flex; flex-direction: column; transition: right 0.3s ease; border-radius: 0 0 0 12px; }
+.route-btn { display: block; margin-top: 1rem; background-color: #3b82f6; color: white; text-decoration: none; padding: 0.8rem; border-radius: 8px; font-weight: 600; transition: background-color 0.2s; }
+.route-btn:hover { background-color: #2563eb; }
+
+/* Drawer / Favorites */
+.favorites-btn { background: #ef4444; color: white; border: none; padding: 0.6rem 1.4rem; border-radius: 999px; cursor: pointer; box-shadow: 0 6px 15px rgba(239, 68, 68, 0.3); font-size: 1rem; margin-top: 1.5rem; display: block; margin-left: auto; margin-right: auto; }
+.login-hint { margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem; }
+
+.drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 200; }
+.drawer {
+  position: fixed; top: 0; right: -350px; width: 300px; height: 100vh;
+  background: var(--bg-card); /* Fond dynamique */
+  color: var(--text-main);
+  box-shadow: -4px 0 15px rgba(0,0,0,0.15); z-index: 201;
+  padding: 1.2rem; display: flex; flex-direction: column; transition: right 0.3s ease;
+}
 .drawer.open { right: 0; }
 .drawer-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
-.drawer-close { font-size: 1.4rem; background: none; border: none; cursor: pointer; }
+.drawer-close { font-size: 1.4rem; background: none; border: none; cursor: pointer; color: var(--text-main); }
 .drawer-content { display: flex; flex-direction: column; gap: 0.8rem; overflow-y: auto; }
-.drawer-item { background: #f8fafc; padding: 0.9rem 1rem; border-radius: 0.6rem; display: flex; justify-content: space-between; align-items: center; }
-.small { color: #6b7280; font-size: 0.85rem; }
+
+.drawer-item {
+  background: var(--bg-body); /* Contraste léger */
+  padding: 0.9rem 1rem; border-radius: 0.6rem; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-color);
+}
+.small { color: var(--text-muted); font-size: 0.85rem; }
 .remove-btn { background: none; border: none; cursor: pointer; font-size: 1.1rem; }
-.empty-msg { color: #6b7280; text-align: center; margin-top: 2rem; }
-.favorites-btn { background: #ef4444; color: white; border: none; padding: 0.6rem 1.4rem; border-radius: 999px; cursor: pointer; box-shadow: 0 6px 15px rgba(239, 68, 68, 0.3); font-size: 1rem; margin-top: 1.5rem; display: block; margin-left: auto; margin-right: auto; }
-.favorites-btn:hover { transform: translateY(-2px); }
+.empty-msg { color: var(--text-muted); text-align: center; margin-top: 2rem; }
 .map { height: 300px; width: 90%; max-width: 450px; margin: 1rem auto; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
 </style>
