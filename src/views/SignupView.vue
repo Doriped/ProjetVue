@@ -10,9 +10,9 @@ const username = ref('')
 const password = ref('')
 const error = ref('')
 
-async function handleSignup() { // Ajout de async
+async function handleSignup() {
   try {
-    await authStore.signup(username.value, password.value) // Ajout de await
+    await authStore.signup(username.value, password.value)
     router.push('/')
   } catch (e) {
     error.value = e.message
@@ -22,93 +22,51 @@ async function handleSignup() { // Ajout de async
 
 <template>
   <div class="auth-page">
-    <h1>Sign Up</h1>
+    <h1>Join LunchRoulette 🚀</h1>
+
+    <p class="auth-desc">
+      Create an account to save your favorite restaurants
+      and never worry about "where to eat" again!
+    </p>
+
     <form @submit.prevent="handleSignup" class="auth-form">
-      <input v-model="username" placeholder="Username" required />
-      <input type="password" v-model="password" placeholder="Password" required />
+      <input v-model="username" placeholder="Choose a Username" required />
+      <input type="password" v-model="password" placeholder="Create a Password" required />
 
       <p v-if="error" class="error">{{ error }}</p>
 
       <button type="submit">Create Account</button>
     </form>
 
-    <p>Already have an account? <router-link to="/login">Log in</router-link></p>
+    <p class="switch-link">
+      Already have an account? <router-link to="/login">Log in</router-link>
+    </p>
 
     <router-link to="/" class="back-link">← Back to home</router-link>
   </div>
 </template>
 
 <style scoped>
-/* Même style que LoginView pour la cohérence */
-.auth-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: #fafafa;
-}
+/* Identique à LoginView pour la cohérence */
+.auth-page { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; padding: 2rem; }
+h1 { margin-bottom: 0.5rem; color: #111827; }
 
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 300px;
-  margin-bottom: 1rem;
-}
-
-input {
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-}
-
-button {
-  padding: 0.8rem;
-  background: #f97316;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  transition: background 0.2s;
-}
-
-button:hover {
-  background: #ea580c;
-}
-
-.error {
-  color: #ef4444;
-  font-size: 0.9rem;
+.auth-desc {
   text-align: center;
-  margin: 0;
-}
-
-p {
-  color: #4b5563;
-}
-
-a {
-  color: #f97316;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-.back-link {
-  margin-top: 1.5rem;
   color: #6b7280;
-  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  max-width: 320px;
 }
 
-.back-link:hover {
-  color: #111827;
-  text-decoration: none;
-}
+.auth-form { display: flex; flex-direction: column; gap: 1rem; width: 300px; margin-bottom: 1rem; }
+input { padding: 0.8rem; border: 1px solid #d1d5db; border-radius: 8px; font-size: 1rem; }
+button { padding: 0.8rem; background: #f97316; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 1rem; transition: background 0.2s; }
+button:hover { background: #ea580c; }
+.error { color: #ef4444; font-size: 0.9rem; text-align: center; margin: 0; }
+.switch-link { color: #4b5563; font-size: 0.95rem; }
+.switch-link a { color: #f97316; text-decoration: none; font-weight: 600; }
+.switch-link a:hover { text-decoration: underline; }
+.back-link { margin-top: 1.5rem; color: #9ca3af; text-decoration: none; font-size: 0.9rem; }
+.back-link:hover { color: #6b7280; }
 </style>
